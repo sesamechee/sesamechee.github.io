@@ -4,12 +4,27 @@
 <head>
 
 	<!--META + CSS-->
-	<?php include "../include/common/include_css.php" ?>
+	<meta charset="UTF-8">
+	<meta name="author" content="" />
+	<meta name="description" />
+	<meta name="keywords" />
+	<meta name="robots" content="all" />
 
-	<!--Individual-->
-	<!--<link rel="stylesheet" href="../css/index.css" type="text/css" />-->
+	<!--Mobile Usage-->
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=no , minimal-ui" />
+	<script type="text/javascript">
+		if ( navigator.userAgent.match(/iPad/i) ){
+			document.write('<meta name="viewport" content="width=1024, minimal-ui , user-scalable=no">');
+		}
+	</script>
 
-	<title>Site Title</title>
+	<!--STYLE-->
+	<link rel="stylesheet" href="../css/vender.css" type="text/css" />
+	<link rel="stylesheet" href="../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../css/icons.css" type="text/css" />
+
+	<title>Gulp Template</title>
 </head>
 
 <body ontouchstart="" class="loading moving">
@@ -17,7 +32,43 @@
 	<div class="wrapper">
 
 		<div class="main">
-			<?php include "include/header.php" ?>
+			<div class="loadbox1"></div>
+			<div class="loadbox2"></div>
+			<div class="loader">
+				<div class="loaderIcon">Loading...</div>
+			</div>
+
+
+			<div class="headerWrapper">
+				<div class="header">
+					<div class="inner">
+						<a href="./index.php" class="logo pjax">
+							Logo
+						</a>
+						<a href="#" class="menuBtn">
+							<span class="bar1"></span>
+							<span class="bar2"></span>
+							<span class="bar3"></span>
+						</a>
+					</div>
+				</div>
+				<div class="menuList">
+					<div class="inner">
+						<div class="menuItem">
+							<a class="pjax" href="./ui.php">UI</a>
+						</div>
+						<div class="menuItem">
+							<a class="pjax" href="#">2</a>
+						</div>
+						<div class="menuItem">
+							<a class="pjax" href="#">3</a>
+						</div>
+						<div class="menuItem">
+							<a class="pjax" href="#">4</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="content">
 
@@ -963,8 +1014,50 @@
 						</div>
 					</div>
 
-					<?php include "include/footer.php" ?>
-					<?php include "include/popup.php" ?>
+					<div class="footerWrapper">
+						<div class="footer">
+
+							Footer
+
+						</div>
+						<a href="javascript:scrollto()" class="btnBackTop"><span class="icon icon-arrowUp"></span></a>
+					</div>
+
+					<div class="dimBg"></div>
+
+					<div class="tncPopup popup mfp-hide">
+						<div class="popupContent">
+							<h1>Terms and Conditions</h1>
+							<ul class="decimal">
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+							</ul>
+							<ul class="disc">
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="alertPopup popup mfp-hide">
+						<div class="popupContent">
+
+						</div>
+					</div>
+
+
+					<div class="videoPopup popup mfp-hide">
+						<div class="videoWrapper">
+
+						</div>
+					</div>
+
 
 				</div>
 
@@ -975,7 +1068,8 @@
 	</div>
 
 	<!--JS-->
-	<?php include "../include/common/include_js.php" ?>
+	<script type="text/javascript" src="../js/vender.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(init_fn);
